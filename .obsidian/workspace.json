@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Untitled.md",
+                "file": "Docker/Introdução ao Docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Introdução ao Docker"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker/Untitled.md",
+                "file": "Docker/Introdução ao Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled"
+              "title": "Backlinks for Introdução ao Docker"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker/Untitled.md",
+                "file": "Docker/Introdução ao Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled"
+              "title": "Outgoing links from Introdução ao Docker"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker/Untitled.md",
+                "file": "Docker/Introdução ao Docker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of Introdução ao Docker"
             }
           }
         ]
@@ -183,10 +183,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "bbef404b791aa1ab",
+  "active": "9daa5df64e2fb690",
   "lastOpenFiles": [
+    "images/Introdução ao Docker - Copy-on-Write.png",
+    "Docker/Introdução ao Docker.md",
+    "images",
+    "Untitled.canvas",
     "README.md",
-    "Docker/Untitled.md",
     "Docker"
   ]
 }
