@@ -30,7 +30,7 @@ https://docs.docker.com/engine/install/
 
 docker container run hello-world execução do nosso primeiro container. Ele irá executar parar, informando a seguinte mensagem:
 
-![hello-world](hello-world.png)
+![hello-world](/images/introducao_ao_docker/hello-world.png)
 
 `docker container run -it ubuntu` execução da imagem ubuntu, interativamente com o container utilizando um terminal tty terminal
 

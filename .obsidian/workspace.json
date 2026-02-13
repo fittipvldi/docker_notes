@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "images/Introducao ao Docker/hello-world.png"
+                "file": "images/introducao_ao_docker/hello-world.png"
               },
               "icon": "lucide-image",
               "title": "hello-world"
@@ -23,12 +23,14 @@
             "id": "4659b13ab7eee2fe",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/Introducao aos Containers/copy-on-write.png"
+                "file": "Docker/Introducao aos Containers.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "copy-on-write"
+              "icon": "lucide-file",
+              "title": "Introducao aos Containers"
             }
           }
         ],
@@ -196,17 +198,19 @@
   },
   "active": "4659b13ab7eee2fe",
   "lastOpenFiles": [
-    "images/Introducao aos Containers/docker_internals.png",
-    "Docker/Introducao aos Containers.md",
     "Docker/Introducao ao Docker.md",
-    "images/Introducao ao Docker/hello-world.png",
+    "Docker/Introducao aos Containers.md",
+    "images/introducao_ao_docker/hello-world.md",
+    "images/Introducao.md",
+    "images/introducao_aos_containers/copy-on-write.png",
+    "images/introducao_aos_containers/docker_internals.png",
+    "images/introducao_ao_docker/hello-world.png",
     "images/Introdução.md",
     "images",
-    "images/Introducao aos Containers/copy-on-write.png",
     "README.md",
-    "images/Introducao ao Docker",
+    "images/introducao_ao_docker",
     "Pasted image 20260212200152.png",
-    "images/Introducao aos Containers",
+    "images/introducao_aos_containers",
     "images",
     "Untitled.canvas",
     "Docker"

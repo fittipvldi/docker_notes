@@ -48,7 +48,7 @@ O conceito é explicado da seguinte forma: "Imaginemos que vou anotar algo em um
 
 No mundo do container, após realizar uma alteração, você estará alterando uma cópia e assim sucessivamente, como se fosse uma pilha de objetos. A primeira é alterável, enquanto as próximas não.
 
-![Introdução ao Docker - Copy-on-Write](copy-on-write.png)
+![copy-on-write](copy-on-write.png)
 
 ---
 
@@ -56,4 +56,4 @@ No mundo do container, após realizar uma alteração, você estará alterando u
 
 Abaixo, é possível visualizar todos os recursos que o Docker utiliza para a criação e gerenciamento de um container:
 
-![](docker_internals.png)
+![docker_internals](docker_internals.png)
