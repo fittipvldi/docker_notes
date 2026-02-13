@@ -1,51 +1,50 @@
 
-### O que é um container? 
 
-Basicamente um Container é um isolamento de recursos para um determinado fim.
+### Instalação do Docker
 
-______________________________________________________________
+Em um ambiente linux, podemos fazer a instalação o download e instalação do Docker Community com o seguinte comando:
 
-### chroot
+`curl -fsSL https://get.docker.com | bash`
 
-Responsável por isolamento de Files System (FHS)
+Após a instalação, é recomendável deixarmos configurado a opção de rodar os comandos do docker sem a necessidade de ser root, conforme abaixo:
 
-___
+`dockerd-rootless-setuptool.sh install`
 
-### namespaces
+Para algumas aplicações, será necessário utilizar a seguinte variável de ambiente:
 
-Módulo do Kernel Linux, também responsável pelo isolamento de recursos de um Container, mais propriamente de processos, filesystems, network, usuários etc.
+`export DOCKER_HOST=unix:///run/user/1000/docker.sock`
 
-`apt-get install debootstrap -y`   instalação do `debootstrap`, responsável por criar um sistema de arquivos (FHS).
+Também, é possível configurar o docker como ativo, assim que o sistema for iniciado:
 
-`debootstrap stable /debian http://deb.debian.org/debian`  instalação do sistema de arquivos debian, dentro do diretório `/debian` .
+`sudo loginctl enable-linger admin`
 
-`unshare —help`  manual de criação. O `unshare` é responsável por criar namespaces.
-
-`unshare —mount —uts —ipc —net —map-root-user —user —pid —fork chroot /debian bash` criação de namespace, no diretório `/debian` . Após a criação da namespace, podem ser montados diretórios, como `mount -t proc none /proc`  e podemos visualizar os processos com `ps -ef` . Podemos sair da namespace com `exit` .
-
-`lsns`  listagem de namespaces.
+https://docs.docker.com/engine/install/
 
 ---
 
-### cgroup
+### Primeiros Comandos
 
-Módulo do Kernel Linux responsável pelo isolamento de recursos de um Container, mais propriamente recursos operacionais como CPU, Memória Ram etc. É possível trabalhar cgroups com os comandos abaixo:
+`docker container ls` listagem dos containers em execução
 
-`stat -fc %T /sys/fs/cgroup/` checar versão do cgroup. 
-`apt-get install cgroup-tools -y` instalação de ferramentas do cgroup. 
+`docker container ls -a` listagem dos containers em execução e parados
 
-`cgcreate —help` manual de criação.
+docker container run hello-world execução do nosso primeiro container. Ele irá executar parar, informando a seguinte mensagem:
 
-`cgcreate -g cpu,memory:teste` criação de um cgroup de nome `teste`. É possível identificar o cgroup de cpu através do comando `ls /sys/fs/cgroup/teste`
+![](hello-world.png)
 
----
+`docker container run -it ubuntu` execução da imagem ubuntu, interativamente com o container utilizando um terminal tty terminal
 
-### Conceito Copy-on-Write
+`docker container attach <idcontainer>` entrar no container
 
-Temos que ter em mente que é que a imagem do container é read-only. Caso subirmos uma imagem e realizarmos uma alteração, isso não refletirá na imagem, mas somente no estado do container que está rodando.
+`docker container run --name <nomecontainer> -it ubuntu` executar um container, com um nome.
 
-O conceito é explicado da seguinte forma: "Imaginemos que vou anotar algo em um livro, no momento que vou pressionar a caneta, ele irá gerar uma cópia e nunca irá alterar o original".
+`docker container stop <namecontainer>` para a execução do container
 
-No mundo do container, após realizar uma alteração, você estará alterando uma cópia e assim sucessivamente, como se fosse uma pilha de objetos. A primeira é alterável, enquanto as próximas não.
+`docker container pause <namecontainer>` pausar a execução do container
 
-![[Introdução ao Docker - Copy-on-Write.png]]
+`docker container start <namecontainer>` iniciar o container
+
+`docker container rm <namecontainer>` remover o container
+
+Também há alguns atalhos. Ao entrar no container você pode sair dele com `Ctrl + d` . Caso o comando principal rodando nele seja o bash, o container será encerrado. Uma outra alternativa é utilizar o `Ctrl + pq`
+

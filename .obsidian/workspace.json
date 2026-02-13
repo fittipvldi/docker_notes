@@ -185,11 +185,17 @@
   },
   "active": "9daa5df64e2fb690",
   "lastOpenFiles": [
-    "images/Introdução ao Docker - Copy-on-Write.png",
+    "Docker/Introdução aos Containers.md",
+    "README.md",
     "Docker/Introdução ao Docker.md",
+    "images/Introdução ao Docker/hello-world.png",
+    "images/Introdução ao Docker",
+    "Pasted image 20260212200152.png",
+    "images/Introdução aos Containers/copy-on-write.png",
+    "images/Introdução aos Containers/docker_internals.png",
+    "images/Introdução aos Containers",
     "images",
     "Untitled.canvas",
-    "README.md",
     "Docker"
   ]
 }
