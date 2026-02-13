@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Docker/images/Introdução ao Docker/hello-world.png"
+                "file": "images/Introducao ao Docker/hello-world.png"
               },
               "icon": "lucide-image",
               "title": "hello-world"
@@ -23,14 +23,12 @@
             "id": "4659b13ab7eee2fe",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Docker/Introdução ao Docker.md",
-                "mode": "source",
-                "source": false
+                "file": "images/Introducao aos Containers/copy-on-write.png"
               },
-              "icon": "lucide-file",
-              "title": "Introdução ao Docker"
+              "icon": "lucide-image",
+              "title": "copy-on-write"
             }
           }
         ],
@@ -198,18 +196,18 @@
   },
   "active": "4659b13ab7eee2fe",
   "lastOpenFiles": [
-    "Docker/images/Introdução ao Docker/hello-world.png",
-    "Docker/Introdução ao Docker.md",
+    "images/Introducao aos Containers/docker_internals.png",
+    "Docker/Introducao aos Containers.md",
+    "Docker/Introducao ao Docker.md",
+    "images/Introducao ao Docker/hello-world.png",
     "images/Introdução.md",
     "images",
-    "Docker/Introdução aos Containers.md",
-    "Docker/images/Introdução aos Containers/copy-on-write.png",
-    "Docker/images/Introdução aos Containers/docker_internals.png",
+    "images/Introducao aos Containers/copy-on-write.png",
     "README.md",
-    "Docker/images/Introdução ao Docker",
+    "images/Introducao ao Docker",
     "Pasted image 20260212200152.png",
-    "Docker/images/Introdução aos Containers",
-    "Docker/images",
+    "images/Introducao aos Containers",
+    "images",
     "Untitled.canvas",
     "Docker"
   ]
