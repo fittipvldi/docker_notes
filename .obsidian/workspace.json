@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Introducao aos Containers.md",
+                "file": "Docker/3 - Criação de Imagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introducao aos Containers"
+              "title": "3 - Criação de Imagens"
             }
           }
         ]
@@ -185,19 +185,27 @@
   },
   "active": "51a7af96b682730d",
   "lastOpenFiles": [
+    "images/1 - Introdução aos Containers/copy-on-write.png",
+    "images/1 - Introdução aos Containers/docker_internals.png",
+    "Docker/1 - Introducao aos Containers.md",
+    "Docker/2 - Introducao ao Docker.md",
+    "Docker/3 - Criação de Imagens.md",
+    "Pasted image 20260220022406.png",
+    "Pasted image 20260220015815.png",
+    "images/2 - Introdução ao Docker/docker_container_ls_3.png",
+    "images/2 - Introdução ao Docker/docker_container_exec_ti_webserver_bash.png",
+    "images/2 - Introdução ao Docker/docker_container_attach_webserver.png",
+    "images/2 - Introdução ao Docker/docker_container_ls_2.png",
+    "images/2 - Introdução ao Docker/docker_container_ls_1.png",
+    "images/2 - Introdução ao Docker/nginx_url.png",
     "README.md",
-    "Docker/Introducao aos Containers.md",
-    "Docker/Introducao ao Docker.md",
-    "images/Introdução ao Docker/hello-world.png",
-    "images/Introdução aos Containers/copy-on-write.png",
-    "images/Introdução aos Containers/docker_internals.png",
+    "images/2 - Introdução ao Docker/hello-world.png",
     "images/introducao_ao_docker/hello-world.md",
     "images/Introducao.md",
     "images/Introdução.md",
     "images",
-    "images/Introdução ao Docker",
-    "Pasted image 20260212200152.png",
-    "images/Introdução aos Containers",
+    "images/2 - Introdução ao Docker",
+    "images/1 - Introdução aos Containers",
     "images",
     "Untitled.canvas",
     "Docker"
