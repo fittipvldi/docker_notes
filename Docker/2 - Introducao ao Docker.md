@@ -77,6 +77,8 @@ Também há alguns atalhos. Ao entrar no container você pode sair dele com `Ctr
 
 `docker pull centos:7` baixa a imagem do centos:7 para seu registry local
 
+`docker image prune` remove todos os lixos, relacionados a imagens no host local
+
 ---
 
 ### Dettached e Exec
