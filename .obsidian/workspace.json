@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/4 - Repositórios.md",
+                "file": "Docker/3 - Criação de Imagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 - Repositórios"
+              "title": "3 - Criação de Imagens"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "51a7af96b682730d",
   "lastOpenFiles": [
-    "Docker/3 - Criação de Imagens.md",
     "Docker/4 - Repositórios.md",
+    "Docker/3 - Criação de Imagens.md",
     "Docker/2 - Introducao ao Docker.md",
     "Docker/1 - Introducao aos Containers.md",
     "images/2 - Introdução ao Docker/hello-world.png",
