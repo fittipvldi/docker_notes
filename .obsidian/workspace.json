@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/3 - Criação de Imagens.md",
+                "file": "Docker/7- Identificando Vulnerabilidades.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 - Criação de Imagens"
+              "title": "7- Identificando Vulnerabilidades"
             }
           }
         ]
@@ -185,10 +185,16 @@
   },
   "active": "51a7af96b682730d",
   "lastOpenFiles": [
-    "Docker/4 - Repositórios.md",
-    "Docker/3 - Criação de Imagens.md",
+    "Docker/6 - Distroless.md",
+    "Docker/7- Identificando Vulnerabilidades.md",
+    "Docker/5 - Containerzando um Webapp.md",
     "Docker/2 - Introducao ao Docker.md",
+    "Docker/3 - Criação de Imagens.md",
+    "Docker/4 - Repositórios.md",
+    "Pasted image 20260224232555.png",
+    "Pasted image 20260224232524.png",
     "Docker/1 - Introducao aos Containers.md",
+    "Pasted image 20260224225006.png",
     "images/2 - Introdução ao Docker/hello-world.png",
     "images/2 - Introdução ao Docker/nginx_url.png",
     "images/2 - Introdução ao Docker/docker_container_attach_webserver.png",
@@ -196,9 +202,6 @@
     "images/2 - Introdução ao Docker/docker_container_ls_1.png",
     "images/2 - Introdução ao Docker/docker_container_ls_2.png",
     "images/2 - Introdução ao Docker/docker_container_ls_3.png",
-    "Pasted image 20260220015815.png",
-    "Pasted image 20260220022406.png",
-    "Pasted image 20260220234000.png",
     "Untitled.canvas",
     "Untitled.base",
     "Untitled 1.base",
