@@ -118,3 +118,39 @@ $ admin@jupiter:~$ docker container run -d --name giropops-senhas -p 5000:5000 -
 ```
 
 ![](../Pasted%20image%2020260224232555.png)
+
+---
+
+### Imagens menores
+
+Tendo em visto que utilizamos a imagem base `python:3.11` para o container, é possível utilizarmos imagens mais enxutas. Para esse exemplo, podemos utilizar a `python:3.11-slim`, conforme abaixo:
+
+```
+$ admin@jupiter:~/giropops-senhas$ cat Dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements.txt .
+COPY app.py .
+COPY templates templates/
+COPY static static/
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["flask", "run", "--host=0.0.0.0"]
+```
+
+Ao listarmos as imagens, é possível identificar a redução no tamnho:
+
+```
+$ admin@jupiter:~/giropops-senhas$ docker image ls
+                                                                                               i Info →   U  In Use
+IMAGE                     ID             DISK USAGE   CONTENT SIZE   EXTRA
+giropops-senha:1.0        b8833ea2fb51       1.62GB          415MB    U
+giropops-senha:2.0        5de8bd530ac8        215MB         52.1MB
+```
+
+No dockerhub é possível avaliar todas as imagens base criadas (oficiais) e é possível utilizar a que mais se adequá ao seu projeto: https://hub.docker.com/_/python
+

@@ -61,9 +61,11 @@ Também há alguns atalhos. Ao entrar no container você pode sair dele com `Ctr
 
 `docker container stats --no-stream` retorna o consumo do container.
 
-`docker container logs <nome_container>` retorna o status do container
+`docker container logs <nome_container>` retorna o status do container.
 
 `docker inspect <nome_container>` retorna todos os dados de construção do container.
+
+`docker history <imagem_container>` retorna todas as layers da imagem.
 
 ---
 
