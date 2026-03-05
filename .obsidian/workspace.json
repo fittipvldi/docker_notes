@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/11 - Limitando recursos nos Containers.md",
+                "file": "Docker/8 - Assinatura de Imagens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 - Limitando recursos nos Containers"
+              "title": "8 - Assinatura de Imagens"
             }
           }
         ]
@@ -183,13 +183,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "51a7af96b682730d",
+  "active": "bbef404b791aa1ab",
   "lastOpenFiles": [
+    "images/8 - Assinatura de Imagens",
+    "images/8 - Assinatura de Imagens/Pasted image 20260301210616.png",
+    "Docker/9 - Volumes em Containers.md",
     "Docker/10 - Redes em Containers.md",
     "Docker/11 - Limitando recursos nos Containers.md",
-    "Docker/9 - Volumes em Containers.md",
     "Docker/8 - Assinatura de Imagens.md",
-    "Pasted image 20260301210616.png",
     "Docker/2 - Introducao ao Docker.md",
     "Docker/3 - Criação de Imagens.md",
     "Pasted image 20260224225006.png",

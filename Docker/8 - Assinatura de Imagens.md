@@ -29,7 +29,7 @@ Enter password for private key:
 
 É possível identificar a associação da chave no DockerHub:
 
-![](../Pasted%20image%2020260301210616.png)
+![](../images/8%20-%20Assinatura%20de%20Imagens/Pasted%20image%2020260301210616.png)
 
 Com a chave pública, é possível validar a imagem:
 
