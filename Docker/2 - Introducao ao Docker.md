@@ -1,4 +1,8 @@
 
+### O que é o Docker?
+
+O Docker é um container engine, responsável por isolar os recursos utilizando os módulos do Kernel.
+
 ### Instalação do Docker
 
 Em um ambiente linux, podemos fazer a instalação o download e instalação do Docker Community com o seguinte comando:
@@ -27,9 +31,39 @@ https://docs.docker.com/engine/install/
 
 `docker container ls -a` listagem dos containers em execução e parados.
 
-docker container run hello-world execução do nosso primeiro container. Ele irá executar parar, informando a seguinte mensagem:
+`docker container run hello-world` execução do nosso primeiro container. Ele irá executar parar, informando a seguinte mensagem:
 
-![hello-world](../images/2%20-%20Introdução%20ao%20Docker/hello-world.png)
+```
+# fittipvldi@venus:~$ docker container run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+17eec7bbc9d7: Pull complete
+ea52d2000f90: Download complete
+Digest: sha256:85404b3c53951c3ff5d40de0972b1bb21fafa2e8daa235355baf44f33db9dbdd
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+ 
+```
 
 `docker container run -ti ubuntu` execução da imagem ubuntu, interativamente com o container utilizando um terminal tty terminal.
 
@@ -89,15 +123,25 @@ Também há alguns atalhos. Ao entrar no container você pode sair dele com `Ctr
 
 Quando iniciamos um container dessa forma não estamos tendo interatividade com ele. Caso queiramos entrar dentro do container, podemos rodar o comando `docker attach webserver`.
 
-Como a imagem do nginx o que está rodando lá dentro não é o bash, não conseguimos realizar um interação com o terminal, utilizando o attach:
+O comando principal da imagem do nginx não é o Bash, sendo assim, ao darmos o comando `attach`, não é possível ter uma interatividade via terminal
 
-![](../images/2%20-%20Introdução%20ao%20Docker/docker_container_ls_2.png)
 
-![](../images/2%20-%20Introdução%20ao%20Docker/docker_container_attach_webserver.png)
+```
+$ fittipvldi@venus:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+1dc624a9b13d   nginx     "/docker-entrypoint.…"   12 seconds ago   Up 11 seconds   80/tcp    webserver
+$ fittipvldi@venus:~$ docker container attach webserver
+
+
+```
+
 
 Caso queiramos ter uma interatividade com o container utilizando o bash, podemos utilizar o `docker container exec -ti webserver bash` e assim, será possível utilizar o terminal dentro do container:
 
-![](../images/2%20-%20Introdução%20ao%20Docker/docker_container_exec_ti_webserver_bash.png)
+```
+$ fittipvldi@venus:~$ docker container exec -ti webserver bash
+root@1dc624a9b13d:/#
+```
 
 ---
 
@@ -107,7 +151,14 @@ Caso queiramos ter uma interatividade com o container utilizando o bash, podemos
 
 Em PORTS qualquer endereço pode chegar na porta 8080 com o protocolo TCP. Dentro do container a porta 8080 está apontada para a porta 80.
 
-![](../images/2%20-%20Introdução%20ao%20Docker/docker_container_ls_3.png)
+```
+$ fittipvldi@venus:~$ docker container run -d -p 8080:80 --name webserver nginx
+c43bdd27dba685d711287f507dcf74095894efc1338f41eb863af13ddb57e79b
+$ fittipvldi@venus:~$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                     NAMES
+c43bdd27dba6   nginx     "/docker-entrypoint.…"   7 seconds ago   Up 6 seconds   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   webserver
+
+```
 
 Em um navegador, é possível acessar o serviço, através da porta 8080:
 
