@@ -32,7 +32,7 @@ $ (.venv) admin@jupiter:~/giropops-senhas$ pip install -r requirements.txt
 É necessário verificarmos se o redis está rodando em nosso host:
 
 ```
-(.venv) admin@jupiter:~/giropops-senhas$ systemctl status redis
+$ (.venv) admin@jupiter:~/giropops-senhas$ systemctl status redis
 ● redis-server.service - Advanced key-value store
      Loaded: loaded (/usr/lib/systemd/system/redis-server.service; enabled; preset: enabled)
      Active: active (running) since Wed 2026-02-25 00:25:29 UTC; 25min ago
@@ -54,7 +54,7 @@ Feb 25 00:25:29 jupiter systemd[1]: Started redis-server.service - Advanced key-
 Dentro do venv, precisamos exportar a seguinte variável de ambiente para que o redis possa se comunicar:
 
 ```
-(.venv) admin@jupiter:~/giropops-senhas$ export REDIS_HOST=localhost
+$ (.venv) admin@jupiter:~/giropops-senhas$ export REDIS_HOST=localhost
 ```
 
 Então, podemos rodar o nosso webapp, utilizando o Flask:

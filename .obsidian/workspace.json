@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/2 - Introducao ao Docker.md",
+                "file": "Docker/12 - Docker Compose.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 - Introducao ao Docker"
+              "title": "12 - Docker Compose"
             }
           }
         ]
@@ -185,19 +185,20 @@
   },
   "active": "a7fea09dbd0fb751",
   "lastOpenFiles": [
-    "Docker/3 - Criação de Imagens.md",
+    "Docker/11 - Limitando recursos nos Containers.md",
+    "Docker/12 - Docker Compose.md",
+    "Docker/10 - Redes em Containers.md",
+    "Docker/9 - Volumes em Containers.md",
+    "Docker/6 - Distroless.md",
     "Docker/4 - Repositórios.md",
     "Docker/5 - Containerzando um Webapp.md",
-    "Docker/6 - Distroless.md",
-    "Docker/7 - Identificando Vulnerabilidades.md",
+    "Docker/3 - Criação de Imagens.md",
     "Docker/2 - Introducao ao Docker.md",
+    "Docker/7 - Identificando Vulnerabilidades.md",
     "Docker/1 - Introducao aos Containers.md",
     "images/8 - Assinatura de Imagens/hub.png",
     "images/2 - Introdução ao Docker/nginx_url.png",
     "Docker/8 - Assinatura de Imagens.md",
-    "Docker/9 - Volumes em Containers.md",
-    "Docker/10 - Redes em Containers.md",
-    "Docker/11 - Limitando recursos nos Containers.md",
     "images/2 - Introdução ao Docker/docker_container_ls_1.png",
     "images/1 - Introdução aos Containers/docker_internals.png",
     "images/1 - Introdução aos Containers/copy-on-write.png",

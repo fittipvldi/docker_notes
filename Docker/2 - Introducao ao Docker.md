@@ -91,13 +91,15 @@ Também há alguns atalhos. Ao entrar no container você pode sair dele com `Ctr
 
 ### Observabilidade
 
-`docker container stats` retorna o consumo do container, dinamicamente.
+`docker container top <nome_container>` retorna os processos do container
 
-`docker container stats --no-stream` retorna o consumo do container.
+`docker container stats <nome_container>` retorna o consumo do container, dinamicamente.
+
+`docker container stats --no-stream <nome_container>` retorna o consumo do container.
 
 `docker container logs <nome_container>` retorna o status do container.
 
-`docker inspect <nome_container>` retorna todos os dados de construção do container.
+`docker inspect <nome_container> / <imagem_container>` retorna todos os dados de construção do container.
 
 `docker history <imagem_container>` retorna todas as layers da imagem.
 
