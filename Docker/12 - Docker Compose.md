@@ -29,7 +29,6 @@ Então, podemos subir nossa configuração:
 
 ```
 $ admin@jupiter:~/compose$ docker compose up
-WARN[0000] /home/admin/compose/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
 [+] up 2/2
  ✔ Network compose_default   Created                                                                0.0s
  ✔ Container compose-nginx-1 Created                                                                0.2s
@@ -59,3 +58,113 @@ Então, se acessarmos a porta do 8080 do host, temos acesso a página do nginx:
 
 ### Comandos Básicos
 
+Finalizar o docker compose com o `docker compose down`
+
+```
+$ admin@jupiter:~/compose$ docker compose down
+[+] down 2/2
+ ✔ Container compose-nginx-1 Removed                                                                0.3s
+ ✔ Network compose_default   Removed                                                                0.1s
+```
+
+Visualizar quais composes estão rodando localmente com o `docker compose ls`:
+
+```
+$ admin@jupiter:~/compose$ docker compose ls
+NAME                STATUS              CONFIG FILES
+compose             running(1)          /home/admin/compose/docker-compose.yaml
+```
+
+Executar o monitor de processados com o `docker compose top`:
+
+```
+$ admin@jupiter:~/compose$ docker compose top
+SERVICE  #   UID    PID   PPID  C   STIME  TTY  TIME      CMD
+nginx    1   root   9924  9899  0   00:23  ?    00:00:00  nginx: master process nginx -g daemon off;
+nginx    1   uuidd  9994  9924  0   00:23  ?    00:00:00  nginx: worker process
+nginx    1   uuidd  9995  9924  0   00:23  ?    00:00:00  nginx: worker process
+```
+
+Pausar e despausar o docker compose:
+
+```
+$ admin@jupiter:~/compose$ docker compose pause
+[+] pause 1/1
+ ✔ Container compose-nginx-1 Paused                                                                 0.0s
+$ admin@jupiter:~/compose$ docker compose unpause
+[+] unpause 1/1
+ ✔ Container compose-nginx-1 Unpaused 
+```
+
+### Segundo Exemplo de Yaml
+
+No exemplo abaixo, subimos a aplicação giropops-senhas, utilizada previamente em outros exemplos:
+
+```
+$ admin@jupiter:~/compose$ cat docker-compose.yaml
+version: '3'
+services:
+  giropops-senhas:
+    image: linuxtips/giropops-senhas:1.0
+    ports:
+      - "5000:5000"
+    networks:
+      - giropops
+    environment:
+      REDIS_HOST: redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - giropops
+
+networks:
+  giropops:
+    driver: bridge
+```
+
+Segue a aplicação rodando:
+
+![](../images/12%20-%20Docker%20Compose/giropops-senhas.png)
+
+### Terceiro Exemplo de Yaml
+
+Nesse terceiro exemplo, podemos adicionar um pouco mais de complexidade ao nosso compose. 
+
+```
+$ admin@jupiter:~/compose$ cat docker-compose.yaml
+version: '3'
+services:
+  giropops-senhas:
+    image: linuxtips/giropops-senhas:1.0
+    ports:
+      - "5000:5000"
+    networks:
+      - giropops
+    environment:
+      REDIS_HOST: redis
+    volumes:
+      - strigus:/strigus
+    depends_on:
+      - redis
+    deploy:
+      resources:
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+        limits:
+          cpus: '0.5'
+          memory: 256M
+  redis:
+    image: redis
+    networks:
+      - giropops
+
+
+networks:
+  giropops:
+    driver: bridge
+volumes:
+  strigus:
+```
