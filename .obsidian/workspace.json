@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/12 - Docker Compose.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 - Docker Compose"
+              "title": "README"
             }
           },
           {
@@ -199,8 +199,11 @@
   },
   "active": "a7fea09dbd0fb751",
   "lastOpenFiles": [
-    "Docker/2 - Introducao ao Docker.md",
+    "Docker/12 - Docker Compose.md",
+    "README.md",
     "Docker/3 - Criação de Imagens.md",
+    "Docker/1 - Introducao aos Containers.md",
+    "Docker/2 - Introducao ao Docker.md",
     "Docker/4 - Repositórios.md",
     "Docker/5 - Containerzando um Webapp.md",
     "Docker/6 - Distroless.md",
@@ -209,7 +212,6 @@
     "Docker/9 - Volumes em Containers.md",
     "Docker/10 - Redes em Containers.md",
     "Docker/11 - Limitando recursos nos Containers.md",
-    "Docker/12 - Docker Compose.md",
     "images/12 - Docker Compose/giropops-senhas.png",
     "images/12 - Docker Compose/nginx.png",
     "images/12 - Docker Compose",
@@ -220,8 +222,6 @@
     "images/2 - Introdução ao Docker/docker_container_ls_1.png",
     "Pasted image 20260411114611.png",
     "Pasted image 20260411111854.png",
-    "Docker/1 - Introducao aos Containers.md",
-    "README.md",
     "Untitled.base",
     "Untitled 1.base",
     "images/8 - Assinatura de Imagens",
