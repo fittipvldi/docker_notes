@@ -96,9 +96,9 @@ $ admin@jupiter:~/compose$ docker compose unpause
  ✔ Container compose-nginx-1 Unpaused 
 ```
 
-### Segundo Exemplo de Yaml
+### Giropops Senhas. Ex 1
 
-No exemplo abaixo, subimos a aplicação giropops-senhas, utilizada previamente em outros exemplos:
+No exemplo abaixo, subimos a aplicação `giropops-senhas`, utilizada previamente em outros exemplos:
 
 ```
 $ admin@jupiter:~/compose$ cat docker-compose.yaml
@@ -128,7 +128,7 @@ Segue a aplicação rodando:
 
 ![](../images/12%20-%20Docker%20Compose/giropops-senhas.png)
 
-### Terceiro Exemplo de Yaml
+### Giropops Senhas. Ex 2 (Resources)
 
 Nesse terceiro exemplo, podemos adicionar um pouco mais de complexidade ao nosso compose. 
 
@@ -168,3 +168,57 @@ networks:
 volumes:
   strigus:
 ```
+
+Acima é possível identificar que limitamos e reservamos recursos utilizando o `resources` .
+
+### Giropops Senhas. Ex 3 (Healthcheck)
+
+É possível configurar o healthcheck. No exemplo abaixo temos para a aplicação e para o redis:
+
+```
+fittipvldi@venus:~$ cat docker-compose.yaml
+version: '3'
+services:
+  giropops-senhas:
+    image: linuxtips/giropops-senhas:1.0
+    ports:
+      - "5000:5000"
+    networks:
+      - giropops
+    environment:
+      REDIS_HOST: redis
+    volumes:
+      - strigus:/strigus
+    depends_on:
+      - redis
+    deploy:
+      resources:
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+  redis:
+    image: redis
+    networks:
+      - giropops
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+
+
+networks:
+  giropops:
+    driver: bridge
+volumes:
+  strigus:
+```
+
