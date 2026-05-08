@@ -3,6 +3,8 @@
 
 O Docker é um container engine, responsável por isolar os recursos utilizando os módulos do Kernel.
 
+---
+
 ### Instalação do Docker
 
 Em um ambiente linux, podemos fazer a instalação o download e instalação do Docker Community com o seguinte comando:

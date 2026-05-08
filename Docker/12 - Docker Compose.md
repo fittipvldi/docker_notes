@@ -10,6 +10,7 @@ $ admin@jupiter:~$ docker compose version
 Docker Compose version v5.0.2
 ```
 
+---
 ### Primeiro Yaml
 
 Nosso primeiro arquivo de configuração do docker compose, será um webservice rodando na porta 8080 do nosso host:
@@ -56,6 +57,7 @@ Então, se acessarmos a porta do 8080 do host, temos acesso a página do nginx:
 
 ![](../images/12%20-%20Docker%20Compose/nginx.png)
 
+---
 ### Comandos Básicos
 
 Finalizar o docker compose com o `docker compose down`
@@ -96,6 +98,8 @@ $ admin@jupiter:~/compose$ docker compose unpause
  ✔ Container compose-nginx-1 Unpaused 
 ```
 
+
+---
 ### Giropops Senhas. Ex 1
 
 No exemplo abaixo, subimos a aplicação `giropops-senhas`, utilizada previamente em outros exemplos:
@@ -128,6 +132,8 @@ Segue a aplicação rodando:
 
 ![](../images/12%20-%20Docker%20Compose/giropops-senhas.png)
 
+
+---
 ### Giropops Senhas. Ex 2 (Resources)
 
 Nesse terceiro exemplo, podemos adicionar um pouco mais de complexidade ao nosso compose. 
@@ -171,6 +177,7 @@ volumes:
 
 Acima é possível identificar que limitamos e reservamos recursos utilizando o `resources` .
 
+---
 ### Giropops Senhas. Ex 3 (Healthcheck)
 
 É possível configurar o healthcheck. No exemplo abaixo temos para a aplicação e para o redis:

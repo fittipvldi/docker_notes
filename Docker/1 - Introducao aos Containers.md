@@ -3,11 +3,19 @@
 
 Basicamente um Container é um isolamento de recursos para um determinado fim.
 
+---
+
+### Container Engine
+
+É o software responsável por criar e gerenciar containers. Ele pega a imagem, cria o container, isola os processos e gerencia o ciclo de vida (start, stop, delete).
+
+Exemplos: Docker Engine, Podman, containerd
+
 ______________________________________________________________
 
 ### chroot
 
-Responsável por isolamento de Files System (FHS)
+Comando Linux que muda o diretório raiz / de um processo, fazendo ele achar que aquela pasta é o sistema inteiro. É considerado um dos ancestrais do conceito de container — isola o processo dentro de uma "falsa raiz" do sistema de arquivos.
 
 ___
 
