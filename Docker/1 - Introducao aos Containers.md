@@ -9,9 +9,33 @@ Basicamente um Container é um isolamento de recursos para um determinado fim.
 
 É o software responsável por criar e gerenciar containers. Ele pega a imagem, cria o container, isola os processos e gerencia o ciclo de vida (start, stop, delete).
 
-Exemplos: Docker Engine, Podman, containerd
+Exemplos: Docker, Podman, containerd
 
 ______________________________________________________________
+
+### Container Runtime
+
+É o software que de fato executa o container no sistema operacional, fazendo as chamadas ao kernel (namespaces, cgroups).
+
+Low-level (fala diretamente com o kernel): 
+
+`runc`: o mais comum, usado pelo Docker
+`crun`: alternativa mais leve
+
+High-level (gerencia imagens, rede e armazenamento, e chama o low-level para executar)
+
+`containerd`: usado pelo Docker e Kubernetes
+`CRI-O:` focado no Kubernetes
+
+---
+
+### OCI
+
+Padrão aberto que define como containers e imagens devem funcionar, independente de qual ferramenta você usa.
+
+Garante que uma imagem criada no Docker rode no Podman, containerd ou qualquer outro runtime sem modificação.
+
+---
 
 ### chroot
 
